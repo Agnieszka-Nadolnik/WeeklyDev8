@@ -1,0 +1,508 @@
+@import url("https://fonts.googleapis.com/css?family=Dosis:300,400|Montserrat:400,700|Quicksand:300,400,700&display=swap&subset=latin-ext");
+.team_container .title_team, .portfolio_container, .brand_container .title_brand {
+  font-family: "Quicksand", sans-serif;
+  padding: 15px 15px;
+  color: white;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.team_container .title_team .txt_container, .portfolio_container .txt_container, .brand_container .title_brand .txt_container {
+  padding: 30px 50px;
+  border: 1px solid white;
+  text-align: center;
+}
+
+.team_container .title_team .txt_container p::before, .portfolio_container .txt_container p::before, .brand_container .title_brand .txt_container p::before, .team_container .title_team .txt_container p::after, .portfolio_container .txt_container p::after, .brand_container .title_brand .txt_container p::after {
+  width: 50px;
+}
+
+.team_container .title_team .txt_container p, .portfolio_container .txt_container p, .brand_container .title_brand .txt_container p, .banner_container .home_info h3 {
+  font-size: 2rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 300;
+  position: relative;
+  display: inline-block;
+  line-height: 2rem;
+}
+
+.team_container .title_team .txt_container p::before, .portfolio_container .txt_container p::before, .brand_container .title_brand .txt_container p::before, .banner_container .home_info h3::before, .team_container .title_team .txt_container p::after, .portfolio_container .txt_container p::after, .brand_container .title_brand .txt_container p::after, .banner_container .home_info h3::after {
+  content: '';
+  position: absolute;
+  border-top: 1px solid rgba(255, 255, 255, 0.7);
+  width: 50px;
+  height: 5px;
+  top: 50%;
+}
+
+.team_container .title_team .txt_container p::before, .portfolio_container .txt_container p::before, .brand_container .title_brand .txt_container p::before, .banner_container .home_info h3::before {
+  right: 100%;
+  margin-right: 10px;
+}
+
+.team_container .title_team .txt_container p::after, .portfolio_container .txt_container p::after, .brand_container .title_brand .txt_container p::after, .banner_container .home_info h3::after {
+  left: 100%;
+  margin-left: 10px;
+}
+
+.team_container .title_team .txt_container h5, .portfolio_container .txt_container h5, .brand_container .title_brand .txt_container h5 {
+  font-size: 4rem;
+  text-transform: uppercase;
+}
+
+@-webkit-keyframes moveArrow {
+  0% {
+    -webkit-transform: translateY(0) rotate(90deg);
+            transform: translateY(0) rotate(90deg);
+  }
+  100% {
+    -webkit-transform: translateY(-10px) rotate(90deg);
+            transform: translateY(-10px) rotate(90deg);
+  }
+}
+
+@keyframes moveArrow {
+  0% {
+    -webkit-transform: translateY(0) rotate(90deg);
+            transform: translateY(0) rotate(90deg);
+  }
+  100% {
+    -webkit-transform: translateY(-10px) rotate(90deg);
+            transform: translateY(-10px) rotate(90deg);
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 8px;
+}
+
+.menu_container {
+  position: relative;
+  width: 100vw;
+  max-width: 100%;
+  padding: 15px 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu_container h2 {
+  font-size: 2rem;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  border: 1px solid #f34739;
+  padding: 5px 10px;
+  border-radius: 15px 0 15px 15px;
+}
+
+nav {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -400%;
+  background-color: #101010;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+nav ul {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+nav ul li {
+  font-size: 2rem;
+  list-style: none;
+  padding: 10px 0;
+}
+
+nav ul li:hover a {
+  color: #f34739;
+}
+
+nav ul li a {
+  color: white;
+  font-family: "Quicksand", sans-serif;
+  text-decoration: none;
+}
+
+.button_menu_hamburger {
+  z-index: 2;
+}
+
+.button_menu_hamburger .hamburger {
+  border: none;
+  outline: none;
+}
+
+.button_menu_hamburger .hamburger {
+  width: 30px;
+  height: 10px;
+  border-top: 1px solid black;
+  background: transparent;
+  position: relative;
+  -webkit-transition: 0.3s -webkit-transform linear;
+  transition: 0.3s -webkit-transform linear;
+  transition: 0.3s transform linear;
+  transition: 0.3s transform linear, 0.3s -webkit-transform linear;
+}
+
+.button_menu_hamburger .hamburger::before, .button_menu_hamburger .hamburger::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-top: 1px solid black;
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+}
+
+.button_menu_hamburger .hamburger::after {
+  -webkit-transform: translateY(23px);
+          transform: translateY(23px);
+  -webkit-transition: 0.3s -webkit-transform linear;
+  transition: 0.3s -webkit-transform linear;
+  transition: 0.3s transform linear;
+  transition: 0.3s transform linear, 0.3s -webkit-transform linear;
+}
+
+.button_menu_hamburger .hamburger.active_hamburger_menu {
+  -webkit-transform: rotate(45deg) translateY(10px);
+          transform: rotate(45deg) translateY(10px);
+  border: none;
+}
+
+.button_menu_hamburger .hamburger.active_hamburger_menu::after {
+  -webkit-transform: rotate(-90deg) translateX(-10px);
+          transform: rotate(-90deg) translateX(-10px);
+  border-top: 1px solid white;
+}
+
+.button_menu_hamburger .hamburger.active_hamburger_menu::before {
+  border-top: 1px solid white;
+}
+
+.banner_container {
+  width: 100%;
+  height: 50vh;
+  padding: 15px 15px;
+  font-family: "Quicksand", sans-serif;
+  color: #ffffff;
+  background-image: url("../img/banner.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.banner_container .home_info {
+  text-align: center;
+  padding-top: 20px;
+  width: 100vw;
+  max-width: 100%;
+}
+
+.banner_container .home_info h1 {
+  font-size: 4.5rem;
+  text-transform: uppercase;
+}
+
+.banner_container .home_info button {
+  font-size: 1.5rem;
+  font-family: "Quicksand", sans-serif;
+  color: #ffffff;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 5px 20px;
+  margin-top: 4rem;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 20px;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.banner_container .home_info button:hover {
+  background-color: #f34739;
+}
+
+.arrow_content {
+  font-size: 3rem;
+  font-weight: lighter;
+  justify-self: flex-end;
+}
+
+.arrow_content p {
+  font-family: "Quicksand", sans-serif;
+  -webkit-animation: moveArrow 1s alternate linear infinite;
+          animation: moveArrow 1s alternate linear infinite;
+}
+
+.arrow_content p::after {
+  content: '>';
+  display: inline-block;
+}
+
+.about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Quicksand", sans-serif;
+}
+
+.about .progress_bar {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 50px;
+}
+
+.about .progress_bar .txt_progress_bar {
+  position: absolute;
+  font-size: 1.5rem;
+  top: 70%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.about .progress_bar .txt_about {
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.team_container {
+  width: 100%;
+  margin: 30px 0;
+}
+
+.team_container .title_team {
+  background-image: url("../img/comp.jpg");
+}
+
+.team_employees .team_simple_employee {
+  font-family: "Quicksand", sans-serif;
+}
+
+.team_employees .team_simple_employee .employee_description {
+  height: 30vh;
+  margin: 25px 15px 0 15px;
+  padding: 40px 50px;
+  text-align: center;
+  border-top: 2px solid black;
+  border-right: 2px solid black;
+  border-left: 2px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.team_employees .team_simple_employee .employee_description .employee_name {
+  text-transform: uppercase;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #f34739;
+}
+
+.team_employees .team_simple_employee .employee_description .employee_name p {
+  font-size: 4rem;
+}
+
+.team_employees .team_simple_employee .employee_description .employee_name p + p {
+  font-size: 1.5rem;
+}
+
+.team_employees .team_simple_employee .employee_description p {
+  font-size: 1.5rem;
+}
+
+.team_employees .team_simple_employee .employee_img {
+  position: relative;
+  height: 30vh;
+  padding: 0 15px 20px 15px;
+  background-image: url("../img/Team/adrianna.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.team_employees .team_simple_employee .employee_img::after {
+  position: absolute;
+  content: '';
+  display: block;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid white;
+}
+
+.team_employees .team_simple_employee .employee_img .border {
+  width: 100%;
+  height: 100%;
+  border-bottom: 2px solid white;
+  border-right: 2px solid white;
+  border-left: 2px solid white;
+}
+
+.team_employees .team_simple_employee .olivia_img {
+  background-image: url("../img/Team/Taylor.jpg");
+}
+
+.team_employees .team_simple_employee .thomas_img {
+  background-image: url("../img/Team/Rectangle 6 copy.jpg");
+}
+
+.team_employees .team_simple_employee .taylor_img {
+  background-image: url("../img/Team/olivia.jpg");
+}
+
+.portfolio_container {
+  background-image: url("../img/portfolio.jpg");
+}
+
+.brand_container .title_brand {
+  background-image: url("../img/Layer 47.jpg");
+}
+
+.brand_container .brands_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.brand_container .brands_content img {
+  margin: 20px;
+  opacity: 0.5;
+  height: 50px;
+  width: 50px;
+}
+
+.footer_container {
+  width: 100%;
+  background-color: #101010;
+  color: white;
+  font-family: "Quicksand", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.footer_container .last_information {
+  width: 60%;
+  margin-bottom: 20px 0 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.footer_container .last_information h6 {
+  font-size: 3rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  padding: 5px;
+  margin: 15px 0 15px;
+  border-bottom: 1px solid #019081;
+}
+
+.footer_container .last_information p {
+  font-size: 1.5rem;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.4);
+  padding: 5px;
+}
+
+.copyright {
+  background-color: #0e0e0d;
+  padding: 10px;
+}
+
+.copyright p {
+  font-family: "Quicksand", sans-serif;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.3);
+  text-align: center;
+}
+/*# sourceMappingURL=main.css.map */

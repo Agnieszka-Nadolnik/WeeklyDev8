@@ -1,0 +1,20 @@
+.brand_container {
+    .title_brand {
+        @extend %bannerContainer;
+        background-image: url('../img/Layer\ 47.jpg');
+    }
+
+    .brands_content {
+        display: flex;
+        flex-wrap:  wrap;
+        justify-content: space-around;
+
+        img {
+            margin: 20px;
+            opacity: 0.5;
+            height: 50px;
+            width: 50px;
+        }
+    }
+}
+

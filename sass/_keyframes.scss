@@ -1,0 +1,9 @@
+@keyframes moveArrow {
+    0% {
+        transform: translateY(0) rotate(90deg); 
+    }
+
+    100% {
+        transform: translateY(-10px) rotate(90deg);
+    }
+}

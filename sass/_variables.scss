@@ -1,0 +1,69 @@
+$basic-padding: 15px 15px;
+$font-Q: 'Quicksand', sans-serif;
+$font-M: 'Montserrat', sans-serif;
+$font-D: 'Dosis', sans-serif;
+
+
+
+%bannerContainer {
+        font-family: $font-Q;
+        padding: $basic-padding;
+        color: white;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        
+        .txt_container {
+            padding: 30px 50px;
+            border: 1px solid white;
+            text-align: center;
+
+            p {
+                 @extend %over-title;
+               
+                    &::before,
+                    &::after {
+                        width: 50px;
+                }
+            }
+            h5 {
+                @extend %title;
+            }
+        }
+    }
+
+
+%over-title {
+        font-size: 2rem;
+        color: rgba($color: #ffffff, $alpha: 0.7);
+        font-weight: 300;
+         position: relative;
+         display: inline-block;
+         line-height: 2rem;
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            border-top: 1px solid rgba($color: #ffffff, $alpha: 0.7);
+            width: 50px;
+            height: 5px;
+            top: 50%;
+
+        } 
+        &::before {
+            right: 100%;
+            margin-right: 10px;
+        }
+        &::after {
+            left: 100%;
+            margin-left: 10px;
+        }
+    }
+
+    %title {
+        font-size: 4rem;
+        text-transform: uppercase; 
+    }
+
+

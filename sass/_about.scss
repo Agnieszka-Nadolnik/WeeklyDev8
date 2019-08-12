@@ -1,0 +1,76 @@
+
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: $font-Q;
+
+    .progress_bar {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        margin: 50px;
+
+        .txt_progress_bar {
+            // z-index: 10;
+            position: absolute;
+            font-size: 1.5rem;
+            top: 70%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .txt_about {
+            width: 100%;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            font-size: 1.5rem;
+            
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+// .about {
+//     .container {
+//         width: 100%;
+//         margin: 0 auto;
+
+//         .box {
+            
+//             .chart {
+//                 position: relative;
+//                 width: 110px;
+//                 height: 110px;
+//                 font-size: 2rem;
+//                 display: flex;
+//                 justify-content: center;
+//                 align-items: center;
+//                 flex-direction: column;
+
+//                 p {
+//                     font-size: 20px;
+//                 }
+                
+//                 canvas {
+//                     position: absolute;
+//                     top: 0;
+//                     left: 0;
+//                 }
+//             }
+//         }
+//     }
+// }

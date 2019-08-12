@@ -1,0 +1,5 @@
+.portfolio_container {
+    @extend %bannerContainer;
+    background-image: url('../img/portfolio.jpg');
+
+}
