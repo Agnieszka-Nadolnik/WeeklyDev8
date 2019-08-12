@@ -89,10 +89,11 @@ window.addEventListener('load', showCounter);
 
 
 
-//BRANDS & PORTFOLIO
+//BRANDS 
   AOS.init();
 
 const brandsContainer = document.querySelector('.brands_content');
+
 const brandList = ['allegro.png', 'AMD.png', 'Android.png', 'apple.png', 'AVG.png', 'bosh.png', 'Dell.png', 'EA.png', 'HF2.png', 'HP.png', 'HTML5.png', 'Insta.png', "Intel.png", 'KFC.png', 'microsoft.png', 'NIKE.png', 'Nivea.png', 'playstation.png', 'Shell.png', 'teamspeak.png', 'ubuntu.png', 'ups.png', 'vw.png'];
 
 let numberOfBrand = 0;
@@ -101,7 +102,6 @@ let maxMobileBrand = 12
 const showBrands = () => {
 
   for(let i=0; i < brandList.length; i++) {
-
         if(numberOfBrand < maxMobileBrand ) {
             const brandImg = document.createElement('img');
             brandsContainer.appendChild(brandImg);
@@ -114,6 +114,32 @@ const showBrands = () => {
     }
 }
 window.addEventListener('load', showBrands);
+
+
+//PORTFOLIO
+
+const portfolioContainer = document.querySelector('.portfolio_container');
+
+let numPortfolio = 20;
+
+
+const showPortfolio = () => {
+    let innerW = window.innerWidth;
+
+    for(let i = 1; i<=numPortfolio; i++) {
+        
+            const portfolioImg = document.createElement('img');
+            portfolioContainer.appendChild(portfolioImg);
+            portfolioImg.style.backgroundImage =`url('./img/portfolio/Layer${i}.png')`;
+            portfolioImg.setAttribute('data-aos', "flip-left");
+            portfolioImg.classList.add('sample_portfolio');
+    }
+}
+
+window.addEventListener('load', showPortfolio);
+
+
+
 
 
 
