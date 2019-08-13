@@ -1,30 +1,143 @@
 .menu_container {
-    position: relative;
+    position: fixed;
     width: 100vw;
     max-width: 100%;
-    padding: $basic-padding;
+    font-family: $font-Q;
+    background-color: #ffffff;
+    z-index: 11;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
+
     h2 {
         font-size: 2rem;
-        font-family: $font-Q;
         font-weight: 300;
         text-transform: uppercase;
         border: 1px solid #f34739;
         padding: 5px 10px;
+        margin:15px;
         border-radius: 15px 0 15px 15px;
+        
     }
+
+    .icon_container {
+      position: absolute;
+      left: 40%;
+      display: none;
+      padding: 10px 0;
+      z-index: 15;
+
+
+      @media #{$tablet-portrait} {
+        display: block;
+       }
+      
+      a {
+          font-size: 2rem;
+          color: black;
+          text-decoration: none;
+          padding: 0 10px;
+
+          &:hover {
+             color: #f34739;
+          }
+      }    
+  }
+}
+
+.hamburger_container {
+  position: relative;
+  margin:15px;
+
+  @media #{$tablet-portrait} {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 40%;
+    padding-left: 10px;
+    margin: 0;
+    background-color: black;
+    display: flex;
+    align-items: center;
+  }
+
+  button {
+    border: none;
+    cursor: pointer;
+    outline: none;
+    z-index: 3;
+
+  }
+
+  .menu_toggle {
+    position: relative;
+    display: block;
+    width: $buttonWidth;
+    height: $buttonHeight;
+    
+    background: transparent;
+    border-top: $lineThickness solid;
+    border-bottom: $lineThickness solid;
+    
+    color: black;
+    font-size: 0;
+    
+    @media #{$tablet-portrait} {
+     color: white;
+    }
+    transition: all $transitionSpeed $transitionEasing;
+
+    &:before,
+    &:after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: $lineThickness;
+      
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      
+      background: currentColor;
+      
+      transform: translate(-50%, -50%);
+      transition: transform $transitionSpeed $transitionEasing;
+    } 
+  }
+
+
+  button:hover {
+    color: lighten(#f34739, 15%);
+  }
+
+  button.is-active {
+    border-color: transparent;
+    color: #f34739;
+
+    &:before {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    &:after {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+  }
 }
 
 nav {
     position: absolute;
-    left:0;
-    right: 0;
-    top: -400%;
+    width: 100vw;
+    max-width: 100%;
+    top: -1000%;
     background-color: #101010;
     transition: 1s;
+
+    @media #{$tablet-portrait} {
+    width: 40%;
+    right: 0;
+     }
 
     ul {
         width: 100%;
@@ -32,89 +145,22 @@ nav {
         align-items: center;
         flex-direction: column;
 
-        li {
-            font-size: 2rem;
+        li,
+        .icon_container {
             list-style: none;
             padding: 10px 0;
-
-            &:hover a {
-                color: #f34739;
-            }
-
+            
             a {
+                font-size: 2rem;
                 color: white;
-                font-family: $font-Q;
                 text-decoration: none;
-            } 
+                padding: 0 10px;
+
+                &:hover {
+                   color: #f34739;
+                }
+            }    
         }
     } 
 }
 
-
-
-
-
-
-
-
-.button_menu_hamburger {
-    z-index: 2;
-  
-    .hamburger {
-      border: none;
-      outline: none;
-    }
-  
-    .hamburger {
-      width: 30px;
-      height: 10px;
-      border-top: 1px solid black;
-      background: transparent;
-      position: relative;
-      transition: 0.3s transform linear;
-  
-      &::before,
-      &::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        border-top: 1px solid black;
-        transform: translateY(10px);
-      }
-  
-      &::after {
-        transform: translateY(23px);
-        transition: 0.3s transform linear;
-      }
-    }
-
-    // .button_menu_hamburger .hamburger_active_color_X {
-    //     border-top: 1px solid white;
-
-    //     &::before,
-    //     &::after {
-    //       content: "";
-    //       position: absolute;
-    //       top: 0;
-    //       left: 0;
-    //       width: 100%;
-    //       border-top: 1px solid black;
-    //     }
-    // }
-
-  
-    .hamburger.active_hamburger_menu {
-      transform: rotate(45deg) translateY(10px);
-      border: none;
-  
-      &::after {
-        transform: rotate(-90deg) translateX(-10px);
-        border-top: 1px solid white;
-      }
-      &::before {
-        border-top: 1px solid white;
-      }
-    }
-  }

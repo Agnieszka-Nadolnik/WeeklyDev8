@@ -3,6 +3,19 @@ $font-Q: 'Quicksand', sans-serif;
 $font-M: 'Montserrat', sans-serif;
 $font-D: 'Dosis', sans-serif;
 
+$buttonWidth: 20px;
+$buttonHeight: 20px;
+$buttonColor: white;
+$lineThickness: 4px;
+$transitionSpeed: .25s;
+$transitionEasing: ease-in-out;
+
+
+$mobile-portrait: '(max-width: 414px) and (orientation: portrait)';
+$mobile-landscape:  '(min-width: 568px) and (max-width: 812px) and (orientation: landscape)';
+$tablet-portrait: '(min-width: 768px) and (orientation: portrait)';
+$tablet-landscape: '(min-width: 1024px) and (max-width: 1112px) and (orientation: landscape)';
+$desktop: '(min-width: 1200px) and (orientation: landscape)';
 
 
 %bannerContainer {

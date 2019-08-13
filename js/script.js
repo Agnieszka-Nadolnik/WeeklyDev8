@@ -1,21 +1,24 @@
 AOS.init();
 
 //MENU
-const btnHamburger = document.querySelector('.hamburger');
+const btnHamburger = document.querySelector('.menu_toggle');
 const menu = document.querySelector('nav');
+// const menuContainer = document.querySelector('.menu_container');
+// const mobile = window.matchMedia('screen and (max-width = 768px)');
 
 const showMenu = () => {
-    btnHamburger.classList.toggle('active_hamburger_menu');
+    btnHamburger.classList.toggle('active_menu');
+    btnHamburger.classList.toggle('is-active');
     
-    if(btnHamburger.classList.contains('active_hamburger_menu')) {
+    if(btnHamburger.classList.contains('active_menu')) {
         menu.style.top = '0';
-    } else if(!btnHamburger.classList.contains('active_hamburger_menu')) {
-        menu.style.top = '-400%';
+    } else if(!btnHamburger.classList.contains('active_menu')) {
+        menu.style.top = '-800%';
     }
-    
 }
-
 btnHamburger.addEventListener('click', showMenu);
+
+
 
 
 
