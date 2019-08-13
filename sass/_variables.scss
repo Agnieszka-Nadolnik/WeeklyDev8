@@ -13,7 +13,7 @@ $transitionEasing: ease-in-out;
 
 $mobile-portrait: '(max-width: 414px) and (orientation: portrait)';
 $mobile-landscape:  '(min-width: 568px) and (max-width: 812px) and (orientation: landscape)';
-$tablet-portrait: '(min-width: 768px) and (orientation: portrait)';
+$tablet-portrait: '(min-width: 768px)';
 $tablet-landscape: '(min-width: 1024px) and (max-width: 1112px) and (orientation: landscape)';
 $desktop: '(min-width: 1200px) and (orientation: landscape)';
 

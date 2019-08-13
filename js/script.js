@@ -19,6 +19,14 @@ const showMenu = () => {
 btnHamburger.addEventListener('click', showMenu);
 
 
+$(document).on('click', 'a', function(event){
+    event.preventDefault();
+ 
+    $('html, body').animate({
+        scrollTop: $( $.attr(this, 'href') ).offset().top - 70
+    }, 700);
+});
+
 
 
 

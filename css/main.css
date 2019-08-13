@@ -108,7 +108,7 @@ html {
   text-transform: uppercase;
   border: 1px solid #f34739;
   padding: 5px 10px;
-  margin: 15px;
+  margin: 10px;
   border-radius: 15px 0 15px 15px;
 }
 
@@ -120,7 +120,7 @@ html {
   z-index: 15;
 }
 
-@media (min-width: 768px) and (orientation: portrait) {
+@media (min-width: 768px) {
   .menu_container .icon_container {
     display: block;
   }
@@ -142,7 +142,7 @@ html {
   margin: 15px;
 }
 
-@media (min-width: 768px) and (orientation: portrait) {
+@media (min-width: 768px) {
   .hamburger_container {
     position: absolute;
     top: 0;
@@ -182,7 +182,7 @@ html {
   transition: all 0.25s ease-in-out;
 }
 
-@media (min-width: 768px) and (orientation: portrait) {
+@media (min-width: 768px) {
   .hamburger_container .menu_toggle {
     color: white;
   }
@@ -234,7 +234,7 @@ nav {
   transition: 1s;
 }
 
-@media (min-width: 768px) and (orientation: portrait) {
+@media (min-width: 768px) {
   nav {
     width: 40%;
     right: 0;
@@ -274,7 +274,14 @@ nav ul .icon_container a:hover {
   color: #f34739;
 }
 
+@media (min-width: 768px) {
+  nav ul .icon_container a {
+    display: none;
+  }
+}
+
 .banner_container {
+  position: relative;
   width: 100%;
   height: 50vh;
   padding: 15px 15px;
@@ -288,8 +295,9 @@ nav ul .icon_container a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -302,8 +310,6 @@ nav ul .icon_container a:hover {
 .banner_container .home_info {
   text-align: center;
   padding-top: 20px;
-  width: 100vw;
-  max-width: 100%;
 }
 
 .banner_container .home_info h1 {
@@ -332,9 +338,9 @@ nav ul .icon_container a:hover {
 }
 
 .arrow_content {
+  position: absolute;
   font-size: 3rem;
-  font-weight: lighter;
-  justify-self: flex-end;
+  font-weight: 300;
 }
 
 .arrow_content p {
@@ -359,7 +365,22 @@ nav ul .icon_container a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-family: "Quicksand", sans-serif;
+}
+
+@media (min-width: 768px) {
+  .about {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }
 
 .about .progress_bar {
@@ -398,14 +419,35 @@ nav ul .icon_container a:hover {
   background-image: url("../img/comp.jpg");
 }
 
+@media (min-width: 768px) {
+  .team_employees {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
 .team_employees .team_simple_employee {
+  width: 100%;
   font-family: "Quicksand", sans-serif;
+}
+
+@media (min-width: 768px) {
+  .team_employees .team_simple_employee {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .team_employees .team_simple_employee:nth-child(2n) {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
 }
 
 .team_employees .team_simple_employee .employee_description {
   height: 30vh;
-  margin: 25px 15px 0 15px;
-  padding: 40px 50px;
+  margin: 20px 15px 0 15px;
   text-align: center;
   border-top: 2px solid black;
   border-right: 2px solid black;
@@ -423,6 +465,15 @@ nav ul .icon_container a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media (min-width: 768px) {
+  .team_employees .team_simple_employee .employee_description {
+    width: 50%;
+    margin: 15px 0;
+    border-right: none;
+    border-bottom: 2px solid black;
+  }
 }
 
 .team_employees .team_simple_employee .employee_description .employee_name {
@@ -454,6 +505,14 @@ nav ul .icon_container a:hover {
   background-position: center;
 }
 
+@media (min-width: 768px) {
+  .team_employees .team_simple_employee .employee_img {
+    width: 50%;
+    margin: 15px 0;
+    padding: 20px 15px 20px 0;
+  }
+}
+
 .team_employees .team_simple_employee .employee_img::after {
   position: absolute;
   content: '';
@@ -467,12 +526,28 @@ nav ul .icon_container a:hover {
   border-top: 20px solid white;
 }
 
+@media (min-width: 768px) {
+  .team_employees .team_simple_employee .employee_img::after {
+    top: 50%;
+    left: 0;
+    -webkit-transform: translate(-50%, 0) rotate(270deg);
+            transform: translate(-50%, 0) rotate(270deg);
+  }
+}
+
 .team_employees .team_simple_employee .employee_img .border {
   width: 100%;
   height: 100%;
   border-bottom: 2px solid white;
   border-right: 2px solid white;
   border-left: 2px solid white;
+}
+
+@media (min-width: 768px) {
+  .team_employees .team_simple_employee .employee_img .border {
+    border-top: 2px solid white;
+    border-left: none;
+  }
 }
 
 .team_employees .team_simple_employee .olivia_img {

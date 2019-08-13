@@ -10,13 +10,26 @@
 
 .team_employees {
 
+    @media #{$tablet-portrait} {
+        width: 80%;
+        margin: 0 auto;
+       }
+
     .team_simple_employee {
+        width: 100%;
         font-family: $font-Q;
+
+        @media #{$tablet-portrait} {
+            display: flex;
+
+            &:nth-child(2n) {
+                flex-direction: row-reverse;
+            }
+           }
 
         .employee_description {
             height: 30vh;
-            margin: 25px 15px 0 15px;
-            padding: 40px 50px;
+            margin: 20px 15px 0 15px;
             text-align: center;
             border-top: 2px solid black;
             border-right: 2px solid black;
@@ -26,11 +39,20 @@
             justify-content: center;
             align-items: center;
 
+            @media #{$tablet-portrait} {
+               width: 50%;
+               margin: 15px 0;
+               border-right: none;
+               border-bottom: 2px solid black;
+               }
+
             .employee_name {
                 text-transform: uppercase;
                 padding-bottom: 5px;
                 margin-bottom: 20px;
                 border-bottom: 2px solid #f34739;
+
+
                 
                 p {
                     font-size: 4rem;
@@ -54,6 +76,13 @@
             background-size: cover;
             background-position: center;
 
+
+            @media #{$tablet-portrait} {
+                width: 50%;
+                margin: 15px 0;
+                padding: 20px 15px 20px 0;
+               }
+
             &::after {
                 position: absolute;
                 content: '';
@@ -64,6 +93,14 @@
                 border-left: 20px solid transparent;
                 border-right: 20px solid transparent;
                 border-top: 20px solid white;
+
+                @media #{$tablet-portrait} {
+                   top: 50%;
+                   left: 0;
+                   transform: translate(-50%, 0) rotate(270deg);
+                }
+
+                
             }
 
             .border {
@@ -72,6 +109,11 @@
                 border-bottom: 2px solid white;
                 border-right: 2px solid white;
                 border-left: 2px solid white;
+
+                @media #{$tablet-portrait} {
+                    border-top: 2px solid white;
+                    border-left: none;
+                 }
             }
         }
         .olivia_img {

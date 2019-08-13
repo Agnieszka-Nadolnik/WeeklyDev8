@@ -3,7 +3,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     font-family: $font-Q;
+
+    @media #{$tablet-portrait} {
+        justify-content: center;
+        flex-direction: row;
+    }
 
     .progress_bar {
         position: relative;
@@ -12,7 +18,6 @@
         margin: 50px;
 
         .txt_progress_bar {
-            // z-index: 10;
             position: absolute;
             font-size: 1.5rem;
             top: 70%;

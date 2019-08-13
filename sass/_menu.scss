@@ -16,7 +16,7 @@
         text-transform: uppercase;
         border: 1px solid #f34739;
         padding: 5px 10px;
-        margin:15px;
+        margin:10px;
         border-radius: 15px 0 15px 15px;
         
     }
@@ -160,6 +160,15 @@ nav {
                    color: #f34739;
                 }
             }    
+        }
+
+        .icon_container {
+
+            a {
+            @media #{$tablet-portrait} {
+              display: none;
+            }
+          }
         }
     } 
 }

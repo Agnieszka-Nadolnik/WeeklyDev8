@@ -1,4 +1,5 @@
 .banner_container {
+    position: relative;
     width: 100%;
     height: 50vh;
     padding: $basic-padding;
@@ -10,15 +11,13 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
     
     .home_info {
         text-align: center;
         padding-top: 20px;
-        width: 100vw;
-        max-width: 100%;
 
         h3 {
             @extend %over-title;
@@ -50,9 +49,9 @@
 }
 
 .arrow_content {
+    position: absolute;
     font-size: 3rem;
-    font-weight: lighter;
-    justify-self: flex-end;
+    font-weight: 300;
 
     p {
         font-family: $font-Q;
