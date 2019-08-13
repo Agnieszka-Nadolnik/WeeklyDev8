@@ -1,3 +1,4 @@
+AOS.init();
 
 //MENU
 const btnHamburger = document.querySelector('.hamburger');
@@ -62,7 +63,6 @@ const setTime = (counter, color, numberOf) => {
 
     counter.stroke();
 
-    //now add condition
     if(num >= numberOf) {
         clearTimeout(idInterval);
     }
@@ -90,7 +90,7 @@ window.addEventListener('load', showCounter);
 
 
 //BRANDS 
-  AOS.init();
+
 
 const brandsContainer = document.querySelector('.brands_content');
 
@@ -118,8 +118,8 @@ window.addEventListener('load', showBrands);
 
 //PORTFOLIO
 
-const portfolioContainer = document.querySelector('.portfolio_container');
-
+const portfolioContainer = document.querySelector('.portfolio_content');
+const samplePortfolioImg =[...portfolioContainer.querySelectorAll('.sample_portfolio')];
 let numPortfolio = 20;
 
 
@@ -128,15 +128,27 @@ const showPortfolio = () => {
 
     for(let i = 1; i<=numPortfolio; i++) {
         
-            const portfolioImg = document.createElement('img');
+            const portfolioImg = document.createElement('div');
             portfolioContainer.appendChild(portfolioImg);
-            portfolioImg.style.backgroundImage =`url('./img/portfolio/Layer${i}.png')`;
-            portfolioImg.setAttribute('data-aos', "flip-left");
             portfolioImg.classList.add('sample_portfolio');
+            portfolioImg.style.backgroundImage =`url('./img/portfolio/Layer${i}.png')`;
+            
+            const eye = document.createElement('img');
+            portfolioImg.appendChild(eye);
+            eye.src = './img/eye.png';
     }
 }
 
+
+
 window.addEventListener('load', showPortfolio);
+
+
+
+
+
+
+
 
 
 

@@ -424,7 +424,18 @@ nav ul li a {
   background-image: url("../img/portfolio.jpg");
 }
 
-.portfolio_container .sample_portfolio {
+.portfolio_container .portfolio_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.portfolio_container .portfolio_content .sample_portfolio {
   width: 100px;
   height: 100px;
   background-size: cover;
@@ -432,13 +443,33 @@ nav ul li a {
   background-repeat: no-repeat;
   -webkit-filter: grayscale(6);
   filter: grayscale(6);
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
 }
 
-.portfolio_container .sample_portfolio:hover {
+.portfolio_container .portfolio_content .sample_portfolio:hover {
   -webkit-filter: grayscale(0);
   filter: grayscale(0);
+}
+
+.portfolio_container .portfolio_content .sample_portfolio img {
+  display: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.portfolio_container .portfolio_content .sample_portfolio:hover img {
+  display: block;
 }
 
 .brand_container .title_brand {
