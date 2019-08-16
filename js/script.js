@@ -131,14 +131,16 @@ window.addEventListener('load', showBrands);
 
 const portfolioContainer = document.querySelector('.portfolio_content');
 const samplePortfolioImg =[...portfolioContainer.querySelectorAll('.sample_portfolio')];
-let numPortfolio = 20;
+
 
 
 const showPortfolio = () => {
-    let innerW = window.innerWidth;
 
-    for(let i = 1; i<=numPortfolio; i++) {
-        
+    let numPortfolio = 20;
+    
+    if(window.innerWidth < 574) {
+
+    for(let i = 1; i<=12; i++) {
             const portfolioImg = document.createElement('div');
             portfolioContainer.appendChild(portfolioImg);
             portfolioImg.classList.add('sample_portfolio');
@@ -147,12 +149,27 @@ const showPortfolio = () => {
             const eye = document.createElement('img');
             portfolioImg.appendChild(eye);
             eye.src = './img/eye.png';
+        }
+    }
+     else if(window.innerWidth > 574) {
+            for(let i = 1; i<=numPortfolio; i++) {
+            
+                const portfolioImg = document.createElement('div');
+                portfolioContainer.appendChild(portfolioImg);
+                portfolioImg.classList.add('sample_portfolio');
+                portfolioImg.style.backgroundImage =`url('./img/portfolio/Layer${i}.png')`;
+                const eye = document.createElement('img');
+                portfolioImg.appendChild(eye);
+                eye.src = './img/eye.png';
+        }
     }
 }
 
 
 
+
 window.addEventListener('load', showPortfolio);
+
 
 
 

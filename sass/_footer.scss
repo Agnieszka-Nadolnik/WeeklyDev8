@@ -5,7 +5,13 @@
     font-family: $font-Q;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+
+    @media #{$tablet-portrait} {
+        flex-direction: row;
+        align-items: flex-start;
+    }
 
     .last_information {
         width: 60%;
