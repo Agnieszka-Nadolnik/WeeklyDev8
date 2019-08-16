@@ -9,15 +9,13 @@
 }
 
 .team_employees {
-
-    @media #{$tablet-portrait} {
-        width: 80%;
-        margin: 0 auto;
-       }
+    width: 80%;
+    margin: 0 auto;
 
     .team_simple_employee {
         width: 100%;
         font-family: $font-Q;
+
 
         @media #{$tablet-portrait} {
             display: flex;
@@ -29,43 +27,65 @@
 
         .employee_description {
             height: 30vh;
-            margin: 20px 15px 0 15px;
-            text-align: center;
-            border-top: 2px solid black;
-            border-right: 2px solid black;
-            border-left: 2px solid black;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            padding: 20px 15px 0 15px;
+           
 
             @media #{$tablet-portrait} {
                width: 50%;
                margin: 15px 0;
-               border-right: none;
-               border-bottom: 2px solid black;
-               }
+               padding: 20px 0px 20px 15px;
+            }
 
-            .employee_name {
-                text-transform: uppercase;
-                padding-bottom: 5px;
-                margin-bottom: 20px;
-                border-bottom: 2px solid #f34739;
+            .name_container {
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                border-top: 2px solid black;
+                border-right: 2px solid black;
+                border-left: 2px solid black;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
 
+                @media #{$tablet-portrait} {
+                    border-bottom: 2px solid black;
+                    border-right: none;  
+                 } 
 
-                
-                p {
-                    font-size: 4rem;
+                .employee_name {
+                    text-transform: uppercase;
+                    text-align: center;
+                    padding-bottom: 5px;
+                    margin-bottom: 20px;
+                    border-bottom: 2px solid #f34739;
+                    
+                    p {
+                        font-size: 3rem;
+                    }
+                    p + p {
+                        font-size: 1.5rem;
+                    }
                 }
-                p + p {
+
+                p {
+                    width: 100%;
                     font-size: 1.5rem;
                 }
             }
 
-            p {
-                font-size: 1.5rem;
+            .employee_description.olivia,
+            .employee_description.taylor {
+
+                @media #{$tablet-portrait} {
+                    padding: 20px 15px 20px 0px;
+                 } 
+                    .name_container {
+                        border-right: 1px solid black;
+                    }
+
             }
-        }
+    }
 
         .employee_img {
             position: relative;
@@ -110,20 +130,42 @@
                 border-right: 2px solid white;
                 border-left: 2px solid white;
 
+                   
                 @media #{$tablet-portrait} {
                     border-top: 2px solid white;
                     border-left: none;
-                 }
+                 } 
             }
         }
-        .olivia_img {
+
+
+         .employee_img.olivia_img {
             background-image: url('../img/Team/Taylor.jpg');
+
+            @media #{$tablet-portrait} {
+                padding: 20px 0px 20px 15px;
+             } 
+            .border {
+                @media #{$tablet-portrait} {
+                    transform: rotate(180deg);
+                 }  
+            }
         }
         .thomas_img {
             background-image: url('../img/Team/Rectangle\ 6\ copy.jpg');
         }
         .taylor_img {
             background-image: url('../img/Team/olivia.jpg');
+
+            @media #{$tablet-portrait} {
+                padding: 20px 0px 20px 15px;
+             } 
+            .border {
+                @media #{$tablet-portrait} {
+                    transform: rotate(180deg);
+                    padding: 20px 0px 20px 15px;
+                 }  
+            }
         }
     }
 }

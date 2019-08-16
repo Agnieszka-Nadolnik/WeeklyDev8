@@ -145,8 +145,7 @@ nav {
         align-items: center;
         flex-direction: column;
 
-        li,
-        .icon_container {
+        li {
             list-style: none;
             padding: 10px 0;
             
@@ -162,13 +161,22 @@ nav {
             }    
         }
 
-        .icon_container {
+        .icon_container_list {
+          padding: 10px 0;
 
-            a {
-            @media #{$tablet-portrait} {
-              display: none;
-            }
-          }
+              a {
+                font-size: 2rem;
+                color: white;
+                text-decoration: none;
+                padding: 0 10px;
+
+                &:hover {
+                   color: #f34739;
+                }
+                @media #{$tablet-portrait} {
+                  display: none;
+                }
+            }     
         }
     } 
 }
