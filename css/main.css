@@ -8,6 +8,12 @@
   background-repeat: no-repeat;
 }
 
+@media (min-width: 768px) {
+  .team_container .title_team, .portfolio_container .title_portfolio, .brand_container .title_brand {
+    padding: 20px 100px;
+  }
+}
+
 .team_container .title_team .txt_container, .portfolio_container .title_portfolio .txt_container, .brand_container .title_brand .txt_container {
   padding: 30px 50px;
   border: 1px solid white;

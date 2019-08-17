@@ -25,11 +25,17 @@ $desktop: '(min-width: 1200px) and (orientation: landscape)';
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
-        
+
+        @media #{$tablet-portrait} {
+                padding: 20px 100px;
+        }
+     
         .txt_container {
             padding: 30px 50px;
             border: 1px solid white;
             text-align: center;
+
+             
 
             p {
                  @extend %over-title;

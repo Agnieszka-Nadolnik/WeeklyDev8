@@ -104,24 +104,25 @@ window.addEventListener('load', showCounter);
 
 
 const brandsContainer = document.querySelector('.brands_content');
-
 const brandList = ['allegro.png', 'AMD.png', 'Android.png', 'apple.png', 'AVG.png', 'bosh.png', 'Dell.png', 'EA.png', 'HF2.png', 'HP.png', 'HTML5.png', 'Insta.png', "Intel.png", 'KFC.png', 'microsoft.png', 'NIKE.png', 'Nivea.png', 'playstation.png', 'Shell.png', 'teamspeak.png', 'ubuntu.png', 'ups.png', 'vw.png'];
-
-let numberOfBrand = 0;
 let maxMobileBrand = 12
+let innW = window.innerWidth;
   
 const showBrands = () => {
-
-  for(let i=0; i < brandList.length; i++) {
-        if(numberOfBrand < maxMobileBrand ) {
-            const brandImg = document.createElement('img');
-            brandsContainer.appendChild(brandImg);
-            brandImg.src =`./img/brand/${brandList[i]}`;
-            brandImg.setAttribute('data-aos', "flip-left");
-        } else if(numberOfBrand > maxMobileBrand) {
-            return;
-        };
-        numberOfBrand++;
+    if (innW < 574) {
+        for(let i=0; i < maxMobileBrand; i++) {
+        const brandImg = document.createElement('img');
+        brandsContainer.appendChild(brandImg);
+        brandImg.src =`./img/brand/${brandList[i]}`;
+        brandImg.setAttribute('data-aos', "flip-left");
+        }
+    } else if (innW > 574) {
+        for(let i=0; i < brandList.length; i++) {
+        const brandImg = document.createElement('img');
+        brandsContainer.appendChild(brandImg);
+        brandImg.src =`./img/brand/${brandList[i]}`;
+        brandImg.setAttribute('data-aos', "flip-left");
+        }
     }
 }
 window.addEventListener('load', showBrands);
@@ -136,7 +137,7 @@ const samplePortfolioImg =[...portfolioContainer.querySelectorAll('.sample_portf
 
 const showPortfolio = () => {
 
-    let numPortfolio = 20;
+    let numPortfolio = 20
     
     if(window.innerWidth < 574) {
 
