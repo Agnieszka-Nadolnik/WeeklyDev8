@@ -361,12 +361,12 @@ nav ul .icon_container_list a:hover {
 }
 
 .banner_container .home_info button {
+  padding: 5px 20px;
+  margin-top: 4rem;
   font-family: "Quicksand", sans-serif;
   color: #ffffff;
   font-weight: 500;
   text-transform: uppercase;
-  padding: 5px 20px;
-  margin-top: 4rem;
   background-color: transparent;
   border: 2px solid white;
   border-radius: 20px;

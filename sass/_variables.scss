@@ -10,15 +10,7 @@ $lineThickness: 4px;
 $transitionSpeed: .25s;
 $transitionEasing: ease-in-out;
 
-
-$mobile-portrait: '(max-width: 414px) and (orientation: portrait)';
-$mobile-landscape:  '(min-width: 568px) and (max-width: 812px) and (orientation: landscape)';
-$tablet-portrait: '(min-width: 768px)';
-$tablet-landscape: '(min-width: 1024px) and (max-width: 1112px) and (orientation: landscape)';
-$desktop: '(min-width: 1200px) and (orientation: landscape)';
 $landscape: '(orientation: landscape)';
-
-
 $mobile: "(min-width: 576px)";
 $tablet: "(min-width: 768px)";
 $desktop-s: "(min-width: 992px)";

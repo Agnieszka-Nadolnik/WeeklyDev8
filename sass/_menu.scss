@@ -50,7 +50,7 @@
   position: relative;
   margin:15px;
 
-  @media #{$tablet-portrait} {
+  @media #{$tablet} {
     position: absolute;
     width: 40%;
     top: 0;

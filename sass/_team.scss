@@ -17,7 +17,7 @@
         font-family: $font-Q;
 
 
-        @media #{$tablet-portrait} {
+        @media #{$tablet} {
             display: flex;
 
             &:nth-child(2n) {
@@ -78,7 +78,7 @@
     .employee_description.olivia,
     .employee_description.taylor {
 
-        @media #{$tablet-portrait} {
+        @media #{$tablet} {
             width: 50%;
             margin: 15px 0;
             padding: 20px 15px 20px 0;
@@ -87,7 +87,7 @@
          .name_container.olivia,
          .name_container.taylor {
                 
-                @media #{$tablet-portrait} {
+                @media #{$tablet} {
                     border-bottom: 2px solid black;
                     border-left: none;
                     border-right: 2px solid black;
@@ -105,7 +105,7 @@
             background-position: center;
 
 
-            @media #{$tablet-portrait} {
+            @media #{$tablet} {
                 width: 50%;
                 margin: 15px 0;
                 padding: 20px 15px 20px 0;
@@ -122,7 +122,7 @@
                 border-right: 20px solid transparent;
                 border-top: 20px solid white;
 
-                @media #{$tablet-portrait} {
+                @media #{$tablet} {
                    top: 50%;
                    left: 0;
                    transform: translate(-50%, 0) rotate(270deg);
@@ -137,7 +137,7 @@
                 border-left: 2px solid white;
 
                    
-                @media #{$tablet-portrait} {
+                @media #{$tablet} {
                     border-top: 2px solid white;
                     border-left: none;
                  } 
@@ -148,11 +148,11 @@
          .employee_img.olivia_img {
             background-image: url('../img/Team/Taylor.jpg');
 
-            @media #{$tablet-portrait} {
+            @media #{$tablet} {
                 padding: 20px 0px 20px 15px;
              } 
             .border {
-                @media #{$tablet-portrait} {
+                @media #{$tablet} {
                     transform: rotate(180deg);
                  }  
             }
@@ -163,11 +163,11 @@
         .taylor_img {
             background-image: url('../img/Team/olivia.jpg');
 
-            @media #{$tablet-portrait} {
+            @media #{$tablet} {
                 padding: 20px 0px 20px 15px;
              } 
             .border {
-                @media #{$tablet-portrait} {
+                @media #{$tablet} {
                     padding: 20px 0px 20px 15px;
                     transform: rotate(180deg);
                  }  
