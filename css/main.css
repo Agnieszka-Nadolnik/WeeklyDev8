@@ -1,7 +1,39 @@
 @import url("https://fonts.googleapis.com/css?family=Dosis:300,400|Montserrat:400,700|Quicksand:300,400,700&display=swap&subset=latin-ext");
+.team_container .title_team .txt_container p, .portfolio_container .title_portfolio .txt_container p, .brand_container .title_brand .txt_container p, .banner_container .home_info h3, .team_employees .team_simple_employee .employee_description .name_container .employee_name p, .footer_container .last_information h6 {
+  font-size: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .team_container .title_team .txt_container p, .portfolio_container .title_portfolio .txt_container p, .brand_container .title_brand .txt_container p, .banner_container .home_info h3, .team_employees .team_simple_employee .employee_description .name_container .employee_name p, .footer_container .last_information h6 {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .team_container .title_team .txt_container p, .portfolio_container .title_portfolio .txt_container p, .brand_container .title_brand .txt_container p, .banner_container .home_info h3, .team_employees .team_simple_employee .employee_description .name_container .employee_name p, .footer_container .last_information h6 {
+    font-size: 3.5rem;
+  }
+}
+
+.team_container .title_team .txt_container h5, .portfolio_container .title_portfolio .txt_container h5, .brand_container .title_brand .txt_container h5, nav ul li a, nav ul .icon_container_list a, .banner_container .home_info button, .team_employees .team_simple_employee .employee_description .name_container .employee_name p + p, .team_employees .team_simple_employee .employee_description .name_container p, .footer_container .last_information p {
+  font-size: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .team_container .title_team .txt_container h5, .portfolio_container .title_portfolio .txt_container h5, .brand_container .title_brand .txt_container h5, nav ul li a, nav ul .icon_container_list a, .banner_container .home_info button, .team_employees .team_simple_employee .employee_description .name_container .employee_name p + p, .team_employees .team_simple_employee .employee_description .name_container p, .footer_container .last_information p {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .team_container .title_team .txt_container h5, .portfolio_container .title_portfolio .txt_container h5, .brand_container .title_brand .txt_container h5, nav ul li a, nav ul .icon_container_list a, .banner_container .home_info button, .team_employees .team_simple_employee .employee_description .name_container .employee_name p + p, .team_employees .team_simple_employee .employee_description .name_container p, .footer_container .last_information p {
+    font-size: 2.5rem;
+  }
+}
+
 .team_container .title_team, .portfolio_container .title_portfolio, .brand_container .title_brand {
-  font-family: "Quicksand", sans-serif;
   padding: 15px 15px;
+  font-family: "Quicksand", sans-serif;
   color: white;
   background-position: center;
   background-size: cover;
@@ -10,36 +42,38 @@
 
 @media (min-width: 768px) {
   .team_container .title_team, .portfolio_container .title_portfolio, .brand_container .title_brand {
-    padding: 20px 100px;
+    padding: 50px 100px;
   }
 }
 
 .team_container .title_team .txt_container, .portfolio_container .title_portfolio .txt_container, .brand_container .title_brand .txt_container {
   padding: 30px 50px;
-  border: 1px solid white;
   text-align: center;
+  border: 1px solid white;
 }
 
 .team_container .title_team .txt_container p::before, .portfolio_container .title_portfolio .txt_container p::before, .brand_container .title_brand .txt_container p::before, .team_container .title_team .txt_container p::after, .portfolio_container .title_portfolio .txt_container p::after, .brand_container .title_brand .txt_container p::after {
   width: 50px;
 }
 
-.team_container .title_team .txt_container p, .portfolio_container .title_portfolio .txt_container p, .brand_container .title_brand .txt_container p, .banner_container .home_info h3 {
-  font-size: 2rem;
-  color: rgba(255, 255, 255, 0.7);
+.team_container .title_team .txt_container h5, .portfolio_container .title_portfolio .txt_container h5, .brand_container .title_brand .txt_container h5 {
   font-weight: 300;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.team_container .title_team .txt_container p, .portfolio_container .title_portfolio .txt_container p, .brand_container .title_brand .txt_container p, .banner_container .home_info h3 {
   position: relative;
   display: inline-block;
-  line-height: 2rem;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .team_container .title_team .txt_container p::before, .portfolio_container .title_portfolio .txt_container p::before, .brand_container .title_brand .txt_container p::before, .banner_container .home_info h3::before, .team_container .title_team .txt_container p::after, .portfolio_container .title_portfolio .txt_container p::after, .brand_container .title_brand .txt_container p::after, .banner_container .home_info h3::after {
   content: '';
   position: absolute;
-  border-top: 1px solid rgba(255, 255, 255, 0.7);
   width: 50px;
   height: 5px;
   top: 50%;
+  border-top: 1px solid rgba(255, 255, 255, 0.7);
 }
 
 .team_container .title_team .txt_container p::before, .portfolio_container .title_portfolio .txt_container p::before, .brand_container .title_brand .txt_container p::before, .banner_container .home_info h3::before {
@@ -50,11 +84,6 @@
 .team_container .title_team .txt_container p::after, .portfolio_container .title_portfolio .txt_container p::after, .brand_container .title_brand .txt_container p::after, .banner_container .home_info h3::after {
   left: 100%;
   margin-left: 10px;
-}
-
-.team_container .title_team .txt_container h5, .portfolio_container .title_portfolio .txt_container h5, .brand_container .title_brand .txt_container h5 {
-  font-size: 4rem;
-  text-transform: uppercase;
 }
 
 @-webkit-keyframes moveArrow {
@@ -96,7 +125,6 @@ html {
   max-width: 100%;
   font-family: "Quicksand", sans-serif;
   background-color: #ffffff;
-  z-index: 11;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -106,24 +134,25 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  z-index: 2;
 }
 
 .menu_container h2 {
+  padding: 5px 10px;
+  margin: 10px;
   font-size: 2rem;
   font-weight: 300;
   text-transform: uppercase;
   border: 1px solid #f34739;
-  padding: 5px 10px;
-  margin: 10px;
   border-radius: 15px 0 15px 15px;
 }
 
 .menu_container .icon_container {
   position: absolute;
   left: 40%;
-  display: none;
   padding: 10px 0;
-  z-index: 15;
+  display: none;
+  z-index: 3;
 }
 
 @media (min-width: 768px) {
@@ -133,10 +162,10 @@ html {
 }
 
 .menu_container .icon_container a {
+  padding: 0 10px;
   font-size: 2rem;
   color: black;
   text-decoration: none;
-  padding: 0 10px;
 }
 
 .menu_container .icon_container a:hover {
@@ -151,10 +180,10 @@ html {
 @media (min-width: 768px) {
   .hamburger_container {
     position: absolute;
+    width: 40%;
     top: 0;
     bottom: 0;
     right: 0;
-    width: 40%;
     padding-left: 10px;
     margin: 0;
     background-color: black;
@@ -262,15 +291,13 @@ nav ul {
 }
 
 nav ul li {
-  list-style: none;
   padding: 10px 0;
+  list-style: none;
 }
 
 nav ul li a {
-  font-size: 2rem;
   color: white;
   text-decoration: none;
-  padding: 0 10px;
 }
 
 nav ul li a:hover {
@@ -282,7 +309,6 @@ nav ul .icon_container_list {
 }
 
 nav ul .icon_container_list a {
-  font-size: 2rem;
   color: white;
   text-decoration: none;
   padding: 0 10px;
@@ -302,7 +328,7 @@ nav ul .icon_container_list a:hover {
   position: relative;
   width: 100%;
   height: 50vh;
-  padding: 15px 15px;
+  padding-top: 50px;
   font-family: "Quicksand", sans-serif;
   color: #ffffff;
   background-image: url("../img/banner.jpg");
@@ -313,9 +339,8 @@ nav ul .icon_container_list a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -325,24 +350,17 @@ nav ul .icon_container_list a:hover {
           flex-direction: column;
 }
 
-@media (min-width: 768px) {
-  .banner_container {
-    height: 70vh;
-  }
-}
-
 .banner_container .home_info {
   text-align: center;
   padding-top: 20px;
 }
 
 .banner_container .home_info h1 {
-  font-size: 4.5rem;
+  font-size: 5rem;
   text-transform: uppercase;
 }
 
 .banner_container .home_info button {
-  font-size: 1.5rem;
   font-family: "Quicksand", sans-serif;
   color: #ffffff;
   font-weight: 500;
@@ -362,11 +380,8 @@ nav ul .icon_container_list a:hover {
 }
 
 .arrow_content {
-  position: absolute;
   font-size: 3rem;
   font-weight: 300;
-  -webkit-transform: translateY(150px);
-          transform: translateY(150px);
 }
 
 .arrow_content p {
@@ -381,6 +396,7 @@ nav ul .icon_container_list a:hover {
 }
 
 .about {
+  font-family: "Quicksand", sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -394,7 +410,6 @@ nav ul .icon_container_list a:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-family: "Quicksand", sans-serif;
 }
 
 @media (min-width: 768px) {
@@ -419,6 +434,7 @@ nav ul .icon_container_list a:hover {
 .about .progress_bar .txt_progress_bar {
   position: absolute;
   font-size: 1.5rem;
+  font-weight: 500;
   top: 70%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -432,8 +448,8 @@ nav ul .icon_container_list a:hover {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+  font-size: 2rem;
   text-align: center;
-  font-size: 1.5rem;
 }
 
 .team_container {
@@ -470,13 +486,14 @@ nav ul .icon_container_list a:hover {
 }
 
 .team_employees .team_simple_employee .employee_description {
-  height: 30vh;
+  height: 40vh;
   padding: 20px 15px 0 15px;
 }
 
 @media (min-width: 768px) {
   .team_employees .team_simple_employee .employee_description {
     width: 50%;
+    height: 30vh;
     margin: 15px 0;
     padding: 20px 0px 20px 15px;
   }
@@ -485,6 +502,7 @@ nav ul .icon_container_list a:hover {
 .team_employees .team_simple_employee .employee_description .name_container {
   width: 100%;
   height: 100%;
+  padding: 0 10px;
   text-align: center;
   border-top: 2px solid black;
   border-right: 2px solid black;
@@ -512,36 +530,35 @@ nav ul .icon_container_list a:hover {
 }
 
 .team_employees .team_simple_employee .employee_description .name_container .employee_name {
-  text-transform: uppercase;
-  text-align: center;
   padding-bottom: 5px;
   margin-bottom: 20px;
+  text-transform: uppercase;
+  text-align: center;
   border-bottom: 2px solid #f34739;
-}
-
-.team_employees .team_simple_employee .employee_description .name_container .employee_name p {
-  font-size: 3rem;
-}
-
-.team_employees .team_simple_employee .employee_description .name_container .employee_name p + p {
-  font-size: 1.5rem;
 }
 
 .team_employees .team_simple_employee .employee_description .name_container p {
   width: 100%;
-  font-size: 1.5rem;
 }
 
 @media (min-width: 768px) {
-  .team_employees .team_simple_employee .employee_description .employee_description.olivia,
-  .team_employees .team_simple_employee .employee_description .employee_description.taylor {
-    padding: 20px 15px 20px 0px;
+  .team_employees .team_simple_employee .employee_description.olivia,
+  .team_employees .team_simple_employee .employee_description.taylor {
+    width: 50%;
+    margin: 15px 0;
+    padding: 20px 15px 20px 0;
   }
 }
 
-.team_employees .team_simple_employee .employee_description .employee_description.olivia .name_container,
-.team_employees .team_simple_employee .employee_description .employee_description.taylor .name_container {
-  border-right: 1px solid black;
+@media (min-width: 768px) {
+  .team_employees .team_simple_employee .employee_description.olivia .name_container.olivia,
+  .team_employees .team_simple_employee .employee_description.olivia .name_container.taylor,
+  .team_employees .team_simple_employee .employee_description.taylor .name_container.olivia,
+  .team_employees .team_simple_employee .employee_description.taylor .name_container.taylor {
+    border-bottom: 2px solid black;
+    border-left: none;
+    border-right: 2px solid black;
+  }
 }
 
 .team_employees .team_simple_employee .employee_img {
@@ -632,9 +649,9 @@ nav ul .icon_container_list a:hover {
 
 @media (min-width: 768px) {
   .team_employees .team_simple_employee .taylor_img .border {
+    padding: 20px 0px 20px 15px;
     -webkit-transform: rotate(180deg);
             transform: rotate(180deg);
-    padding: 20px 0px 20px 15px;
   }
 }
 
@@ -644,19 +661,28 @@ nav ul .icon_container_list a:hover {
 
 .portfolio_container .portfolio_content {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  height: 60vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+@media (orientation: landscape) {
+  .portfolio_container .portfolio_content {
+    height: 70vh;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+  }
 }
 
 .portfolio_container .portfolio_content .sample_portfolio {
-  width: 100px;
-  height: 100px;
+  width: 100%;
+  height: 100%;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -698,27 +724,36 @@ nav ul .icon_container_list a:hover {
 }
 
 .brand_container .brands_content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  width: 100%;
+  max-width: 100%;
+  padding: 20px 10px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+@media (orientation: landscape) {
+  .brand_container .brands_content {
+    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+  }
 }
 
 .brand_container .brands_content img {
-  margin: 20px;
   opacity: 0.5;
-  height: 50px;
-  width: 50px;
+  margin: 0 auto;
 }
 
 .footer_container {
   width: 100%;
-  background-color: #101010;
-  color: white;
   font-family: "Quicksand", sans-serif;
+  color: white;
+  background-color: #101010;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -748,7 +783,7 @@ nav ul .icon_container_list a:hover {
 
 .footer_container .last_information {
   width: 60%;
-  margin-bottom: 20px 0 20px 0;
+  margin: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -765,7 +800,6 @@ nav ul .icon_container_list a:hover {
 }
 
 .footer_container .last_information h6 {
-  font-size: 3rem;
   font-weight: 300;
   text-transform: uppercase;
   padding: 5px;
@@ -774,9 +808,8 @@ nav ul .icon_container_list a:hover {
 }
 
 .footer_container .last_information p {
-  font-size: 1.5rem;
-  text-align: center;
   color: rgba(255, 255, 255, 0.4);
+  text-align: center;
   padding: 5px;
 }
 

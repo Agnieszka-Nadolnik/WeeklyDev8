@@ -26,12 +26,12 @@
            }
 
         .employee_description {
-            height: 30vh;
+            height: 40vh;
             padding: 20px 15px 0 15px;
-           
 
-            @media #{$tablet-portrait} {
+            @media #{$tablet} {
                width: 50%;
+               height: 30vh;
                margin: 15px 0;
                padding: 20px 0px 20px 15px;
             }
@@ -39,6 +39,7 @@
             .name_container {
                 width: 100%;
                 height: 100%;
+                padding: 0 10px;
                 text-align: center;
                 border-top: 2px solid black;
                 border-right: 2px solid black;
@@ -48,42 +49,50 @@
                 justify-content: center;
                 align-items: center;
 
-                @media #{$tablet-portrait} {
+                @media #{$tablet} {
                     border-bottom: 2px solid black;
-                    border-right: none;  
-                 } 
+                    border-right: none;
+                }            
 
                 .employee_name {
-                    text-transform: uppercase;
-                    text-align: center;
                     padding-bottom: 5px;
                     margin-bottom: 20px;
+                    text-transform: uppercase;
+                    text-align: center;
                     border-bottom: 2px solid #f34739;
                     
                     p {
-                        font-size: 3rem;
+                        @extend %title;
                     }
                     p + p {
-                        font-size: 1.5rem;
+                        @extend %text;
                     }
                 }
                 p {
                     width: 100%;
-                    font-size: 1.5rem;
+                    @extend %text;
                 }
-            }
+          }
+    }
 
-            .employee_description.olivia,
-            .employee_description.taylor {
+    .employee_description.olivia,
+    .employee_description.taylor {
 
+        @media #{$tablet-portrait} {
+            width: 50%;
+            margin: 15px 0;
+            padding: 20px 15px 20px 0;
+         }
+
+         .name_container.olivia,
+         .name_container.taylor {
+                
                 @media #{$tablet-portrait} {
-                    padding: 20px 15px 20px 0px;
-                 } 
-                    .name_container {
-                        border-right: 1px solid black;
-                    }
-
-            }
+                    border-bottom: 2px solid black;
+                    border-left: none;
+                    border-right: 2px solid black;
+              } 
+         }
     }
 
         .employee_img {
@@ -118,8 +127,6 @@
                    left: 0;
                    transform: translate(-50%, 0) rotate(270deg);
                 }
-
-                
             }
 
             .border {
@@ -161,8 +168,8 @@
              } 
             .border {
                 @media #{$tablet-portrait} {
-                    transform: rotate(180deg);
                     padding: 20px 0px 20px 15px;
+                    transform: rotate(180deg);
                  }  
             }
         }

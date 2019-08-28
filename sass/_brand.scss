@@ -2,18 +2,26 @@
     .title_brand {
         @extend %bannerContainer;
         background-image: url('../img/Layer\ 47.jpg');
+     
     }
 
     .brands_content {
-        display: flex;
-        flex-wrap:  wrap;
-        justify-content: space-around;
+        width: 100%;
+        max-width: 100%;
+        padding: 20px 10px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+
+        
+        @media #{$landscape} {
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+        }
 
         img {
-            margin: 20px;
             opacity: 0.5;
-            height: 50px;
-            width: 50px;
+            margin: 0 auto;
         }
     }
 }

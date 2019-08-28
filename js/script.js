@@ -3,8 +3,7 @@ AOS.init();
 //MENU
 const btnHamburger = document.querySelector('.menu_toggle');
 const menu = document.querySelector('nav');
-// const menuContainer = document.querySelector('.menu_container');
-// const mobile = window.matchMedia('screen and (max-width = 768px)');
+
 
 const showMenu = () => {
     btnHamburger.classList.toggle('active_menu');
@@ -104,7 +103,7 @@ window.addEventListener('load', showCounter);
 
 
 const brandsContainer = document.querySelector('.brands_content');
-const brandList = ['allegro.png', 'AMD.png', 'Android.png', 'apple.png', 'AVG.png', 'bosh.png', 'Dell.png', 'EA.png', 'HF2.png', 'HP.png', 'HTML5.png', 'Insta.png', "Intel.png", 'KFC.png', 'microsoft.png', 'NIKE.png', 'Nivea.png', 'playstation.png', 'Shell.png', 'teamspeak.png', 'ubuntu.png', 'ups.png', 'vw.png'];
+const brandList = ['allegro.png', 'AMD.png', 'Android.png', 'apple.png', 'AVG.png', 'bosh.png', 'Dell.png', 'EA.png', 'HF2.png', 'HP.png', 'HTML5.png', 'Insta.png', "Intel.png", 'KFC.png', 'microsoft.png', 'NIKE.png', 'Nivea.png', 'playstation.png', 'Shell.png', 'teamspeak.png', 'ubuntu.png'];
 let maxMobileBrand = 12
 let innW = window.innerWidth;
   
@@ -137,7 +136,7 @@ const samplePortfolioImg =[...portfolioContainer.querySelectorAll('.sample_portf
 
 const showPortfolio = () => {
 
-    let numPortfolio = 20
+    let numPortfolio = 21;
     
     if(window.innerWidth < 574) {
 
@@ -165,9 +164,6 @@ const showPortfolio = () => {
         }
     }
 }
-
-
-
 
 window.addEventListener('load', showPortfolio);
 

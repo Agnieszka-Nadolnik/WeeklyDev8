@@ -16,59 +16,100 @@ $mobile-landscape:  '(min-width: 568px) and (max-width: 812px) and (orientation:
 $tablet-portrait: '(min-width: 768px)';
 $tablet-landscape: '(min-width: 1024px) and (max-width: 1112px) and (orientation: landscape)';
 $desktop: '(min-width: 1200px) and (orientation: landscape)';
+$landscape: '(orientation: landscape)';
+
+
+$mobile: "(min-width: 576px)";
+$tablet: "(min-width: 768px)";
+$desktop-s: "(min-width: 992px)";
+$desktop-m: "(min-width: 1200px)";
+$desktop-l: "(min-width: 1600px)";
+
+$font-text-s: 1.5rem;
+$font-text-m: 2rem;
+$font-text-l: 2.5rem;
+
+$font-title-s: 2.5rem;
+$font-title-m: 3rem;
+$font-title-l: 3.5rem;
+
+
+%title {
+    font-size: $font-title-s;
+
+    @media #{$tablet} {
+        font-size: $font-title-m;
+    }
+
+    @media #{$desktop-m} {
+        font-size: $font-title-l;
+    }
+}
+
+%text {
+    font-size: $font-text-s;
+
+    @media #{$tablet} {
+        font-size: $font-text-m;
+    };
+
+
+    @media #{$desktop-m} {
+        font-size: $font-text-l;
+    }
+}
+
+
 
 
 %bannerContainer {
-        font-family: $font-Q;
         padding: $basic-padding;
+        font-family: $font-Q;
         color: white;
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
 
-        @media #{$tablet-portrait} {
-                padding: 20px 100px;
+        @media #{$tablet} {
+                padding: 50px 100px;
         }
-     
+
         .txt_container {
             padding: 30px 50px;
-            border: 1px solid white;
             text-align: center;
-
-             
+            border: 1px solid white; 
 
             p {
                  @extend %over-title;
-               
                     &::before,
                     &::after {
                         width: 50px;
                 }
             }
+
             h5 {
-                @extend %title;
+                @extend %text;
+                font-weight: 300;
+                color: rgba($color: #ffffff, $alpha: 0.7);
             }
         }
     }
 
 
 %over-title {
-        font-size: 2rem;
+        position: relative;
+        display: inline-block;
+        @extend %title;
         color: rgba($color: #ffffff, $alpha: 0.7);
-        font-weight: 300;
-         position: relative;
-         display: inline-block;
-         line-height: 2rem;
 
         &::before,
         &::after {
             content: '';
             position: absolute;
-            border-top: 1px solid rgba($color: #ffffff, $alpha: 0.7);
             width: 50px;
             height: 5px;
             top: 50%;
-
+            border-top: 1px solid rgba($color: #ffffff, $alpha: 0.7);
         } 
         &::before {
             right: 100%;
@@ -80,9 +121,6 @@ $desktop: '(min-width: 1200px) and (orientation: landscape)';
         }
     }
 
-    %title {
-        font-size: 4rem;
-        text-transform: uppercase; 
-    }
+  
 
 

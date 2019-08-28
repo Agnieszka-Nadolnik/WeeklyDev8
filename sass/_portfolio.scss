@@ -7,13 +7,20 @@
 
     .portfolio_content {
         width: 100%;
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
+        height: 60vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        
+        @media #{$landscape} {
+            height: 70vh;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+        }
 
         .sample_portfolio {
-            width: 100px;
-            height: 100px;
+            width: 100%;
+            height: 100%;
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;

@@ -1,41 +1,41 @@
 .footer_container {
     width: 100%;
-    background-color: #101010;
-    color: white;
     font-family: $font-Q;
+    color: white;
+    background-color: #101010;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
 
-    @media #{$tablet-portrait} {
+    @media #{$tablet} {
         flex-direction: row;
         align-items: flex-start;
     }
 
     .last_information {
         width: 60%;
-        margin-bottom: 20px 0 20px 0;
+        margin: 20px;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
 
         h6 {
-            font-size: 3rem;
+            @extend %title;
             font-weight: 300;
             text-transform: uppercase;
             padding: 5px;
             margin: 15px 0 15px;
             border-bottom: 1px solid #019081;
+
         }
 
         p {
-            font-size: 1.5rem;
-            text-align: center;
+            @extend %text;
             color: rgba(255,255,255, 0.4);
+            text-align: center;
             padding: 5px;
         }
     }
-
 }

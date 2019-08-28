@@ -4,19 +4,18 @@
     max-width: 100%;
     font-family: $font-Q;
     background-color: #ffffff;
-    z-index: 11;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    z-index: 2;
 
     h2 {
+        padding: 5px 10px;
+        margin:10px;
         font-size: 2rem;
         font-weight: 300;
         text-transform: uppercase;
         border: 1px solid #f34739;
-        padding: 5px 10px;
-        margin:10px;
         border-radius: 15px 0 15px 15px;
         
     }
@@ -24,27 +23,28 @@
     .icon_container {
       position: absolute;
       left: 40%;
-      display: none;
       padding: 10px 0;
-      z-index: 15;
+      display: none;
+      z-index: 3;
 
-
-      @media #{$tablet-portrait} {
+      @media #{$tablet} {
         display: block;
        }
       
       a {
+          padding: 0 10px;
           font-size: 2rem;
           color: black;
           text-decoration: none;
-          padding: 0 10px;
 
           &:hover {
              color: #f34739;
           }
-      }    
-  }
-}
+        }    
+      }
+    }
+
+
 
 .hamburger_container {
   position: relative;
@@ -52,10 +52,10 @@
 
   @media #{$tablet-portrait} {
     position: absolute;
+    width: 40%;
     top: 0;
     bottom: 0;
     right: 0;
-    width: 40%;
     padding-left: 10px;
     margin: 0;
     background-color: black;
@@ -84,7 +84,7 @@
     color: black;
     font-size: 0;
     
-    @media #{$tablet-portrait} {
+    @media #{$tablet} {
      color: white;
     }
     transition: all $transitionSpeed $transitionEasing;
@@ -134,7 +134,7 @@ nav {
     background-color: #101010;
     transition: 1s;
 
-    @media #{$tablet-portrait} {
+    @media #{$tablet} {
     width: 40%;
     right: 0;
      }
@@ -146,14 +146,13 @@ nav {
         flex-direction: column;
 
         li {
-            list-style: none;
             padding: 10px 0;
+            list-style: none;
             
             a {
-                font-size: 2rem;
+                @extend %text;
                 color: white;
                 text-decoration: none;
-                padding: 0 10px;
 
                 &:hover {
                    color: #f34739;
@@ -165,7 +164,7 @@ nav {
           padding: 10px 0;
 
               a {
-                font-size: 2rem;
+                @extend %text;
                 color: white;
                 text-decoration: none;
                 padding: 0 10px;
@@ -173,7 +172,7 @@ nav {
                 &:hover {
                    color: #f34739;
                 }
-                @media #{$tablet-portrait} {
+                @media #{$tablet} {
                   display: none;
                 }
             }     
