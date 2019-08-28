@@ -1,4 +1,7 @@
+document.addEventListener("DOMContentLoaded", function(event) {
+
 AOS.init();
+
 
 //MENU
 const btnHamburger = document.querySelector('.menu_toggle');
@@ -8,6 +11,7 @@ const menu = document.querySelector('nav');
 const showMenu = () => {
     btnHamburger.classList.toggle('active_menu');
     btnHamburger.classList.toggle('is-active');
+
     
     if(btnHamburger.classList.contains('active_menu')) {
         menu.style.top = '0';
@@ -95,9 +99,19 @@ const showCounter = () => {
     })
 }
 
-window.addEventListener('load', showCounter);
+//TEAM 
 
+const showAnimation = () => {
+    const sampleAnimation = [...document.querySelectorAll('.team_simple_employee')];
 
+    sampleAnimation.forEach((animation, index) => {
+        if(index % 2 === 0) {
+            animation.setAttribute('data-aos', 'fade-right');
+        }else {
+            animation.setAttribute('data-aos', 'fade-left');
+        }
+    });
+}
 
 //BRANDS 
 
@@ -124,14 +138,13 @@ const showBrands = () => {
         }
     }
 }
-window.addEventListener('load', showBrands);
+
 
 
 //PORTFOLIO
 
 const portfolioContainer = document.querySelector('.portfolio_content');
 const samplePortfolioImg =[...portfolioContainer.querySelectorAll('.sample_portfolio')];
-
 
 
 const showPortfolio = () => {
@@ -165,15 +178,17 @@ const showPortfolio = () => {
     }
 }
 
-window.addEventListener('load', showPortfolio);
 
+const loadPage = () => {
+    showCounter();
+    showAnimation();
+    showPortfolio();
+    showBrands();
+}
 
+window.addEventListener('load', loadPage);
 
-
-
-
-
-
+})
 
 
 
